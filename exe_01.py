@@ -5,10 +5,15 @@
 # corresponda a até 75% do valor da gasolina.
 
 
-gasolina = float(input("Valor da gasolina: "))
-etanol = float(input("Valor do etanol: "))
+gasolina = float(input("Valor da gasolina: ").replace(",","."))
+etanol = float(input("Valor do etanol: ").replace(",","."))
 
-porcentagem = etanol*75/100
+porcentagem = gasolina*0.75
+
+if etanol <= porcentagem:
+    print(f"Melhor abastecer com etanol.")
+else:
+    print(f"Melhor abastecer com gasolina.")
 
 
 
